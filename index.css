@@ -1,40 +1,34 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    padding: 20px;
-    background-color: #f4f4f4;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massage Chair Savings Calculator</title>
+    <link rel="stylesheet" href="style.css"> <!-- Ensure this path is correct -->
+</head>
+<body>
 
-#savingsCalculator {
-    max-width: 400px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+    <div class="calculator-container">
+        <h1>Massage Chair Savings Calculator</h1>
+        <div id="savingsCalculator">
+            <label for="sessionCost">Cost per Therapy Session ($):</label>
+            <input type="number" id="sessionCost" placeholder="Enter cost per session">
 
-label, input, button {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-}
+            <label for="sessionsPerMonth">Number of Sessions per Month:</label>
+            <input type="number" id="sessionsPerMonth" placeholder="Enter sessions per month">
 
-button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-}
+            <label for="chairCost">Cost of Massage Chair ($):</label>
+            <input type="number" id="chairCost" placeholder="Enter cost of massage chair">
 
-button:hover {
-    background-color: #0056b3;
-}
+            <label for="chairLifespan">Expected Lifespan of Chair (Years):</label>
+            <input type="number" id="chairLifespan" placeholder="Enter lifespan of chair">
 
-#result {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #d4edda;
-    color: #155724;
-    border-left: 5px solid #c3e6cb;
-}
+            <button onclick="calculateSavings()">Calculate Savings</button>
+
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
