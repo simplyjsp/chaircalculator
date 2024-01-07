@@ -1,34 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Massage Chair Savings Calculator</title>
-    <link rel="stylesheet" href="style.css"> <!-- Ensure this path is correct -->
-</head>
-<body>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #000;
+    text-align: center; /* Centers the content */
+}
 
-    <div class="calculator-container">
-        <h1>Massage Chair Savings Calculator</h1>
-        <div id="savingsCalculator">
-            <label for="sessionCost">Cost per Therapy Session ($):</label>
-            <input type="number" id="sessionCost" placeholder="Enter cost per session">
+.calculator-container {
+    background-color: #ffffff; /* White background for the calculator */
+    width: 100%;
+    max-width: 600px; /* Adjust width as needed */
+    margin: 20px auto; /* Centering the calculator */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    transition: box-shadow 0.3s; /* Smooth transition for hover effect */
+}
 
-            <label for="sessionsPerMonth">Number of Sessions per Month:</label>
-            <input type="number" id="sessionsPerMonth" placeholder="Enter sessions per month">
+.calculator-container:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Enhanced shadow when hovered */
+}
 
-            <label for="chairCost">Cost of Massage Chair ($):</label>
-            <input type="number" id="chairCost" placeholder="Enter cost of massage chair">
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
 
-            <label for="chairLifespan">Expected Lifespan of Chair (Years):</label>
-            <input type="number" id="chairLifespan" placeholder="Enter lifespan of chair">
+#savingsCalculator {
+    background-color: #f5f5dc; /* Light creme color for the input area */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+}
 
-            <button onclick="calculateSavings()">Calculate Savings</button>
+label, input, button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
 
-            <div id="result"></div>
-        </div>
-    </div>
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners for button */
+}
 
-    <script src="script.js"></script> <!-- Link to your JavaScript file -->
-</body>
-</html>
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #d4edda; /* Subtle green for results */
+    color: #155724;
+    border-left: 5px solid #c3e6cb;
+    border-radius: 5px; /* Rounded corners for result box */
+}
+
+/* ... other styles remain unchanged ... */
+
+button {
+    background-color: #000000; /* Black background for the button */
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners for button */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #333333; /* Slightly lighter black when hovered */
+}
+
+#result {
+    display: none; /* Initially hidden */
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f4f4f4; /* Subtle background color for results */
+    color: #000; /* Black text color */
+    border-radius: 5px; /* Rounded corners for result box */
+    border: 1px solid #ddd; /* Border to match the overall style */
+}
