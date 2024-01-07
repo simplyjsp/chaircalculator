@@ -3,31 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Massage Chair Savings Estimator</title>
-    <link rel="stylesheet" href="index.css"> <!-- Link to your CSS file -->
+    <title>Massage Chair Savings Calculator</title>
+    <link rel="stylesheet" href="style.css"> <!-- Ensure this path is correct -->
 </head>
 <body>
 
-    <h1>Massage Chair Savings Estimator</h1>
+    <div class="calculator-container">
+        <h1>Massage Chair Savings Calculator</h1>
+        <div id="savingsCalculator">
+            <label for="sessionCost">Cost per Therapy Session ($):</label>
+            <input type="number" id="sessionCost" placeholder="Enter cost per session">
 
-    <div id="savingsCalculator">
-        <label for="sessionCost">Cost per Therapy Session ($):</label>
-        <input type="number" id="sessionCost" placeholder="Enter cost per session">
+            <label for="sessionsPerMonth">Number of Sessions per Month:</label>
+            <input type="number" id="sessionsPerMonth" placeholder="Enter sessions per month">
 
-        <label for="sessionsPerMonth">Number of Sessions per Month:</label>
-        <input type="number" id="sessionsPerMonth" placeholder="Enter sessions per month">
+            <label for="chairCost">Cost of Massage Chair ($):</label>
+            <input type="number" id="chairCost" placeholder="Enter cost of massage chair">
 
-        <label for="chairCost">Cost of Massage Chair ($):</label>
-        <input type="number" id="chairCost" placeholder="Enter cost of massage chair">
+            <label for="chairLifespan">Expected Lifespan of Chair (Years):</label>
+            <input type="number" id="chairLifespan" placeholder="Enter lifespan of chair">
 
-        <label for="chairLifespan">Expected Lifespan of Chair (Years):</label>
-        <input type="number" id="chairLifespan" placeholder="Enter lifespan of chair">
+            <button onclick="calculateSavings()">Calculate Savings</button>
 
-        <button onclick="calculateSavings()">Calculate Savings</button>
-
-        <div id="result"></div>
+            <div id="result"></div>
+        </div>
     </div>
 
-    <script src="index.js"></script> <!-- Link to your JavaScript file -->
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
 </body>
 </html>
