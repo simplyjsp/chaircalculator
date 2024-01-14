@@ -11,17 +11,18 @@ function calculateSavings() {
         return; // Exit the function if any input is invalid
     }
 
-    // Calculate total costs
+    // Calculate total therapy cost over the lifespan of the chair
     let totalTherapyCostPerYear = sessionCost * sessionsPerMonth * 12;
-    let totalChairCost = chairCost; // As it's a one-time purchase
-    let chairUsageYears = chairLifespan;
+    let totalTherapyCostOverLifespan = totalTherapyCostPerYear * chairLifespan;
 
     // Calculate savings
-    let totalTherapyCostOverLifespan = totalTherapyCostPerYear * chairUsageYears;
-    let savings = totalTherapyCostOverLifespan - totalChairCost;
+    let savings = totalTherapyCostOverLifespan - chairCost;
 
-    // Display result
-    let resultElement = document.getElementById('result');
-    resultElement.innerHTML = `Estimated Savings over ${chairUsageYears} years: $${savings.toFixed(2)}`;
+    // Format savings as currency
+    let formattedSavings = savings.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+
+    // Display result with a shocked face emoji
+    let resultElement = document.getElementById('analysisResult');
+    resultElement.innerHTML = `Estimated Savings over ${chairLifespan} years: ${formattedSavings} 🥳`;
     resultElement.style.display = 'block'; // Make the result visible
 }
