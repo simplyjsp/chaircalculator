@@ -4,30 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Massage Chair Savings Calculator</title>
-    <link rel="stylesheet" href="index.css"> <!-- Ensure this path is correct -->
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome for icons -->
 </head>
 <body>
 
-    <div class="calculator-container">
+    <div class="tool-container">
         <h1>Massage Chair Savings Calculator</h1>
-        <div id="savingsCalculator">
-            <label for="sessionCost">Cost per Therapy Session ($):</label>
-            <input type="number" id="sessionCost" placeholder="Enter cost per session">
 
-            <label for="sessionsPerMonth">Number of Sessions per Month:</label>
-            <input type="number" id="sessionsPerMonth" placeholder="Enter sessions per month">
+        <label for="sessionCost"><i class="fas fa-dollar-sign icon"></i>Cost per Therapy Session ($):</label>
+        <input type="number" id="sessionCost" placeholder="Enter cost per session">
 
-            <label for="chairCost">Cost of Massage Chair ($):</label>
-            <input type="number" id="chairCost" placeholder="Enter cost of massage chair">
+        <label for="sessionsPerMonth"><i class="fas fa-calendar-alt icon"></i>Number of Sessions per Month:</label>
+        <input type="number" id="sessionsPerMonth" placeholder="Enter sessions per month">
 
-            <label for="chairLifespan">Expected Lifespan of Chair (Years):</label>
-            <input type="number" id="chairLifespan" placeholder="Enter lifespan of chair">
+        <label for="chairCost"><i class="fas fa-chair icon"></i>Cost of Massage Chair ($):</label>
+        <input type="number" id="chairCost" placeholder="Enter cost of massage chair">
 
-            <button onclick="calculateSavings()">Calculate Savings</button>
+        <label for="chairLifespan"><i class="fas fa-hourglass-half icon"></i>Expected Lifespan of Chair (Years):</label>
+        <input type="number" id="chairLifespan" placeholder="Enter lifespan of chair">
 
-            <div id="result"></div>
+        <button onclick="calculateSavings()">Calculate Savings</button>
+
+        <div id="analysisResult">
+            <!-- Analysis results will go here -->
         </div>
     </div>
+
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
+
 
     <script src="index.js"></script> <!-- Link to your JavaScript file -->
 </body>
